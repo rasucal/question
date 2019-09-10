@@ -63,7 +63,7 @@ if(isset($_POST['name'], $_POST['comment']))
             echo $word . ' ';       //配列を1行に出力。半角スペースで区切る
             
             if(isset($_POST['delete'])){
-                $delete = $_POST['delete'];    //formから送られてきたdelete番号を代入
+                var_dump($delete = $_POST['delete']);    //formから送られてきたdelete番号を代入
                 $fp = fopen($datafile,'a');
             if($delete == $post_number){
                 unset($comment_library[$delete]);
